@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    filename: 'main.js',
+    filename: 'main.[chunkhash].js',
     path: path.resolve(__dirname, 'build'),
+    clean: true
   },
   plugins: [
     new HtmlWebpackPlugin({
